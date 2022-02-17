@@ -12,7 +12,7 @@ const conn = myClient.connect();
 console.log("Connecting ...");
 conn.on("connect", onEventFn);
 
-const stdin = setupInput();
+const stdin = setupInput(conn);
 
 conn.on('data', (messageFromServer) => {
   console.log('Message from server:', messageFromServer);
